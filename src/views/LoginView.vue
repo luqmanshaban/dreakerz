@@ -39,7 +39,11 @@ const submitForm = async () => {
 </script>
 
 <template>
+
   <div class="login-form">
+    <RouterLink to="/">
+      <img src="@/assets/images/logo.png" alt="logo">
+    </RouterLink>
     <form @submit.prevent="submitForm">
       <fieldset>
         <legend>Login</legend>
@@ -56,6 +60,19 @@ const submitForm = async () => {
         </div>
       </fieldset>
     </form>
-
+    <section style="display: flex; justify-content: space-between; align-items: center;">
+      <p>Already have an account?</p>
+      <RouterLink to="/signup">Sign Up</RouterLink>
+    </section>
   </div>
 </template>
+
+<style scoped>
+img {
+  height: 70px;
+  border-radius: 50%;
+}
+input {
+  background-color: aliceblue;
+}
+</style>

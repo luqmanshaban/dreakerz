@@ -1,13 +1,14 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue';
 import './assets/styles/App.scss'
+import deleteToken from './components/DeleteToken';
+
+deleteToken()
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <NavBar />
     </div>
   </header>
 

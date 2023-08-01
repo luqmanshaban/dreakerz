@@ -2,11 +2,15 @@
 import '../assets/styles/Home.scss'
 import HeaderText from '../components/HeaderText.vue'
 import HomeProduct from '../components/HomeProduct.vue';
+import NavBar from '@/components/NavBar.vue'
 </script>
 
 <template>
+  <header>
+    <NavBar />
+  </header>
   <main>
-    <section class="home bg-blue">
+    <section class="home">
       <HeaderText />
       <img src="@/assets/images/landing.png" alt="Sneaker" id="headerImg">
     </section>

@@ -1,12 +1,23 @@
 <script setup>
-import LogOut from '../../components/LogOut.vue';
+import AdminNav from '../../components/dashboard/AdminNav.vue';
+import '@/assets/styles/dashboard/admin/AdminView.scss'
+import router from '../../router';
 
+function CheckIfLoggedIn() {
+  const token = localStorage.getItem('token') || ''
+  if(token === '') {
+    router.push('/')
+  }
+}
+CheckIfLoggedIn()
 
 </script>
 
 <template>
-    <div class="admin-dashboard">
-        <h1>Admin Dashboard</h1>
-        <LogOut />
+    <header>
+      <AdminNav />
+    </header>
+    <div class="admin-view">
+      <h1>Admin Dashboard</h1>
     </div>
 </template>

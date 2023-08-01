@@ -1,9 +1,19 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex'
 
 export default createStore({
   state: {
+    isLoggedIn: false  
   },
-  mutations: {},
-  actions: {},
-  modules: {}
+  mutations: {
+    setIsLoggedIn(state){
+      const token = localStorage.getItem('token')
+      if(token){
+        state.isLoggedIn = true
+      }
+    }
+  },
+  actions: {
+  },
+  modules: {
+  }
 })

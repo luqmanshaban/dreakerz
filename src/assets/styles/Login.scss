@@ -14,6 +14,7 @@
             @include flex();
             padding: 20px;
             border-radius: 10px;
+            border: 1px solid #000;
             legend {
                 text-align: center;
             }

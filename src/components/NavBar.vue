@@ -16,7 +16,12 @@
       </ul>
       <ul :class="{active: active, buttons: true}">
         <li class="cartIcon">
-          <img src="@/assets/images/cart.png"  alt="cart-icon">
+          <v-icon
+            size="large"
+            color="orange-darken-2"
+            icon="mdi-cart"
+            style="cursor: pointer;"
+          ></v-icon>
         </li>
         <li @click="unToggle" class="btn1">
           <RouterLink to="/signup" class="signup">Sign Up</RouterLink>

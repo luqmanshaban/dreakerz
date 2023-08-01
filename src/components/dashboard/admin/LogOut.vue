@@ -1,12 +1,12 @@
 <script setup>
 import axios from 'axios';
-import router from '../../router';
+import router from '../../../router';
 
 const Logout = async () => {
   const token = localStorage.getItem('token');
   try {
      await axios.post(
-      'http://localhost:8000/api/user/logout',
+      'http://localhost:8000/api/admin/logout',
       {},
       {
         headers: {
@@ -23,10 +23,7 @@ const Logout = async () => {
 </script>
 
 <template>
-    <div class="user-dashboard">
-        <h1>User Dashboard</h1>
-        <button @click="Logout">Logout</button>
-    </div>
+    <button @click="Logout">Logout</button>
 </template>
 
 <style scoped>
@@ -34,7 +31,7 @@ button {
     background-color: red;
     padding: 10px 15px;
     font-size: 16px;
-    border: none;
+    border: 1px solid red;
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
@@ -43,6 +40,6 @@ button {
 button:hover {
     background-color: #fff;
     color: red;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 </style>

@@ -1,4 +1,7 @@
 <template>
+  <header>
+    <NavBar />
+  </header>
   <div class="about">
     <ProductView />
     <ProductImages />
@@ -6,6 +9,7 @@
 </template>
 
 <script setup>
+import NavBar from '../components/NavBar.vue';
 import ProductView from '../components/ProductDesc.vue';
 import ProductImages from '../components/ProductImages.vue';
 </script>
