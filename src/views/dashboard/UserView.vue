@@ -1,31 +1,14 @@
 <script setup>
-import axios from 'axios';
-import router from '../../router';
+import UserNav from '../../components/dashboard/user/UserNav.vue';
 
-const Logout = async () => {
-  const token = localStorage.getItem('token');
-  try {
-     await axios.post(
-      'http://localhost:8000/api/user/logout',
-      {},
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-      );
-    localStorage.removeItem('token')
-    router.push('/')
-  } catch (error) {
-    console.log(error);
-  }
-};
 </script>
 
 <template>
     <div class="user-dashboard">
+      <header>
+        <UserNav />
+      </header>
         <h1>User Dashboard</h1>
-        <button @click="Logout">Logout</button>
     </div>
 </template>
 

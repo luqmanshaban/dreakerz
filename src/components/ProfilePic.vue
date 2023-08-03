@@ -88,8 +88,9 @@ getProfilePic();
   align-items: center;
 }
 img {
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
 }
 
 .upload button {

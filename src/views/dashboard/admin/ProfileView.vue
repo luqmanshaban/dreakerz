@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import AdminNav from '../../../components/dashboard/AdminNav.vue';
+import AdminNav from '../../../components/dashboard/admin/AdminNav.vue';
 import ProfilePic from '@/components/ProfilePic.vue'
 import axios from 'axios';
 import { ref } from 'vue';

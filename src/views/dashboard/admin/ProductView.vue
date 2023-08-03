@@ -1,7 +1,7 @@
 <script setup>
 import ProductDesc from '@/components/ProductDesc.vue';
 import ProductImages from '@/components/ProductImages.vue'
-import AdminNav from '@/components/dashboard/AdminNav.vue'
+import AdminNav from '@/components/dashboard/admin/AdminNav.vue'
 
 </script>
 <template>

@@ -11,6 +11,7 @@ import LogOut from '@/components/dashboard/admin/LogOut.vue'
             <RouterLink to="/admin">Home</RouterLink>
             <RouterLink to="/admin/users">Users</RouterLink>
             <RouterLink to="/admin/product">Product</RouterLink>
+            <RouterLink to="/admin/orders">Orders</RouterLink>
         </ul>
         <ul>
             <RouterLink to="/admin/profile">Profile</RouterLink>    

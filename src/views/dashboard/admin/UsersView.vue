@@ -1,5 +1,5 @@
 <script setup>
-import AdminNav from '../../../components/dashboard/AdminNav.vue';
+import AdminNav from '../../../components/dashboard/admin/AdminNav.vue';
 import { ref } from 'vue';
 import axios from 'axios';
 
