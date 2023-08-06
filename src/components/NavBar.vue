@@ -7,21 +7,21 @@
 
       <ul :class="[{ active: active }, 'flex justify-between items-center gap-10']">
         <li @click="unToggle">
-          <RouterLink class="cursor-pointer hover:text-orange-600 ease-in-out duration-300" to="/">Home</RouterLink>
+          <RouterLink class="cursor-pointer hover:text-orange-600 hover:font-bold font-sans ease-in-out duration-300" to="/">Home</RouterLink>
         </li>
         <li @click="unToggle">
-          <RouterLink class="cursor-pointer hover:text-orange-600 ease-in-out duration-300" to="/about">About</RouterLink>
+          <RouterLink class="cursor-pointer hover:text-orange-600 hover:font-bold font-sans ease-in-out duration-300" to="/about">About</RouterLink>
         </li>
         <li @click="unToggle">
-          <RouterLink to="/contact" class="cursor-pointer hover:text-orange-600 ease-in-out duration-300 text-black">Contact</RouterLink>
+          <RouterLink to="/contact" class="cursor-pointer hover:text-orange-600 hover:font-bold font-sans ease-in-out duration-300">Contact</RouterLink>
         </li>
       </ul>
 
       <ul :class="[{active: active}, 'flex gap-10']">
         <li @click="unToggle">
         <RouterLink
-          to="/user/profile"
-          class=" hover:text-orange-600 bg-black p-3 text-white rounded font-sans ease-in-out duration-300"
+          to="/signup"
+          class=" hover:text-orange-600 hover:font-bold bg-black p-3 text-white rounded font-sans ease-in-out duration-300"
         >
           Signup
         </RouterLink>
@@ -29,7 +29,7 @@
       <li @click="unToggle" class="btn2">
         <RouterLink
           to="/login"
-          class="hover:bg-white hover:text-orange-600 bg-orange p-3 text-black rounded font-sans ease-in-out duration-300"
+          class="hover:bg-white hover:text-orange-600 hover:font-bold bg-orange p-3 text-black rounded font-sans ease-in-out duration-300"
         >
           Login
         </RouterLink>

@@ -1,15 +1,5 @@
 <script setup>
 import AdminNav from '../../components/dashboard/admin/AdminNav.vue';
-import router from '../../router';
-
-function CheckIfLoggedIn() {
-  const token = localStorage.getItem('token') || ''
-  if(token === '') {
-    router.push('/')
-  }
-}
-CheckIfLoggedIn()
-
 </script>
 
 <template>

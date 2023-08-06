@@ -1,5 +1,15 @@
 <script setup>
 import UserNav from '../../components/dashboard/user/UserNav.vue';
+import { useStore } from 'vuex';
+
+
+const store = useStore()
+const count = store.state.cart.count
+
+
+const incrementCount = () => {
+  store.commit['cart/increment']
+}
 
 </script>
 
@@ -9,23 +19,7 @@ import UserNav from '../../components/dashboard/user/UserNav.vue';
         <UserNav />
       </header>
         <h1>User Dashboard</h1>
+        <p>count: {{ count }}</p>
+        <button class="bg-red-700 p-2 rounded-lg text-white font-sans font-bold" @click="incrementCount">Increment</button>
     </div>
 </template>
-
-<style scoped>
-button {
-    background-color: red;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 15px;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-}
-button:hover {
-    background-color: #fff;
-    color: red;
-    border: 1px solid red;
-}
-</style>

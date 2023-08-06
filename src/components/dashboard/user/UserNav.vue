@@ -1,35 +1,31 @@
 <script setup>
 import LogOut from '@/components/dashboard/user/LogOut.vue'
-import { ref } from 'vue';
-const active = ref(false)
+import { useStore } from 'vuex';
 
-const toggle = () => active.value = !active.value;
-const unToggle = () => active.value = false;
+const store = useStore()
+store.dispatch('profile/fetchUserProfilePicture');
+
+const profile = store.state.profile.profilePicture;
+
 </script>
 
 <template>
-    <nav class="bg-black flex gap-10 justify-between items-center py-10 px-20">
-
-        <RouterLink to="/user">
-            <h1 class="text-3xl text-white">Dreakerz</h1>
+    <nav class="bg-black p-3 flex justify-between items-center md:px-20 md:py-10 m-10 h-11 rounded-xl">
+        <RouterLink to="/admin">
+            <h1 class="text-3xl font-semibold hover:text-orange-700 ease-in-out duration-300">Dreakerz</h1>
         </RouterLink>
-
-        <ul :class="['flex gap-20',{active:active}]">
-            <RouterLink class="text-white hover:text-[#A73B38] cursor-pointer ease-in-out duration-500" @click="unToggle" to="/user">Home</RouterLink>
-            <RouterLink class="text-white hover:text-[#A73B38] cursor-pointer ease-in-out duration-500" @click="unToggle" to="/user/product">Product</RouterLink>
-            <RouterLink class="text-white hover:text-[#A73B38] cursor-pointer ease-in-out duration-500" @click="unToggle" to="/user/orders">Orders</RouterLink>
+        <ul class="flex gap-10 justify-between items-center font-sans">
+            <RouterLink class="hover:text-orange-700 hover:font-semibold ease-in-out duration-300" to="/user">Home</RouterLink>
+            <RouterLink class="hover:text-orange-700 hover:font-semibold ease-in-out duration-300" to="/user/product">Product</RouterLink>
+            <RouterLink class="hover:text-orange-700 hover:font-semibold ease-in-out duration-300" to="/user/orders">Orders</RouterLink>
         </ul>
-
-        <ul :class="{navRight: true, active:active}">
-            <RouterLink @click="unToggle" to="/user/profile">Profile</RouterLink> 
+        <ul class="flex gap-10 items-center">
+            <RouterLink to="/user/profile">
+                <img class="rounded-full h-[50px]" v-if="profile" :src="profile" alt="profile pic"> 
+                <img class="rounded-full h-[50px]" v-else-if="!profile" src="@/assets/images/default-profile.png" alt="default profile image">
+            </RouterLink>    
             <LogOut />
         </ul>
-
-        <div :class="['hamburger','hidden flex-col', {active: active},]" @click="toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+        
     </nav>
-    
 </template>

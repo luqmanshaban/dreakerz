@@ -1,44 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-// import store from '../stores/index.js'
-
-// function guardMyroute(to, from, next) {
-// //  var isUser = false
-// // if(localStorage.getItem('token'))
-// //   isAuthenticated = true;
-// //  else
-// //   isAuthenticated= false;
-// //  if(isAuthenticated) 
-// //  {
-// //   next();
-// //  } 
-// //  else
-// //  {
-// //   next('/login');
-// //  }
-
-//     const isLoggedIn = store.state.isLoggedIn;
-//     const isAdmin = store.state.isAdmin;
-//     const isUser = store.state.isUser;
-
-//     const adminCondition = isLoggedIn && (to.name.startsWith('admin-') || to.name === 'admin' && isAdmin);
-
-//     const userCondition = isLoggedIn && (to.name.startsWith('user-') || to.name === 'user' && isUser);
-
-    
-//     if (adminCondition) {
-//       next();
-//     } 
-//     else if (userCondition) {
-//       next();
-//     }
-//     else if (!isLoggedIn) {
-//       next('/login');
-//     } 
-//     else {
-//       next('/');
-//     }
-// }
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

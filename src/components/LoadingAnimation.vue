@@ -30,7 +30,7 @@ body {
   .wave {
     width: 5px;
     height: 50px;
-    background: linear-gradient(45deg, #00e80c, #fff);
+    background: linear-gradient(45deg, #000fe8, #fff);
     margin: 5px;
     animation: wave 1s linear infinite;
     border-radius: 20px;

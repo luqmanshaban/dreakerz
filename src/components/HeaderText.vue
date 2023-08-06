@@ -4,7 +4,7 @@
         <h5>Sale Product</h5>
         <h1>Make your Move & <span><br></span>Get 30% off</h1>
         <p>Stand out from the crowd with Dreakerz. Best fit for any kind of workout</p>
-        <RouterLink to="/product">Shop Now</RouterLink>
+        <RouterLink to="/signup">Shop Now</RouterLink>
     </section>
 </template>
 

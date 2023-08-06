@@ -35,7 +35,7 @@ import Footer from '@/components/FooTer.vue';
                             <p class="px-4 py-6 pt-0 ml-4 -mt-4 text-black">For any questions, concerns, or assistance, you can reach out to our dedicated customer support team through our contact page or via email. We aim to respond promptly and provide the best possible assistance.</p>
                         </details>
                     </div>
-                    <div class="space-y-4">
+                    <div class="space-y-4 hidden md:block">
                         <details class="w-[320px] md:w-[500px] border rounded-lg">
                             <summary class="text-black px-4 py-6 focus:outline-none focus-visible:ri">What is your return and exchange Policy?</summary>
                             <p class="px-4 py-6 pt-0 ml-4 -mt-4 text-black">We want you to be completely satisfied with your purchase. If for any reason you are not happy with your order, you may return it within 30 days of delivery for a [500px] refund or exchange. Please ensure the sneakers are in their original condition and packaging.</p>
