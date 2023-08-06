@@ -1,6 +1,10 @@
 # Dreakerz Ecom Store
 
-<!--![Sneaker Single Ecom Store](sneaker-store.jpg)-->
+<p align="center">
+  <img src="https://github.com/luqmanshaban/dreakerz/assets/109437909/34ce7818-4410-4bea-a8fb-f8d8b78ae90a" alt="Logo" width="150"/>
+</p>
+
+
 
 Welcome to the Dreakerz Ecom Store, a modern and stylish e-commerce website built with Vue.js. Here, you can find the latest collection of trendy sneakers to suit your fashion needs. Whether you are a sneakerhead or simply looking for comfortable and fashionable footwear, our store has got you covered!
 
@@ -66,9 +70,7 @@ sneaker-single-ecom-store/
 
 ## Screenshots
 
-![Home Page](screenshots/home.png)
-
-![Product Page](screenshots/product.png)
+![product Page](https://github.com/luqmanshaban/dreakerz/assets/109437909/1ffe1071-ad8a-457a-b709-c44db83a7226)
 
 ![Checkout Page](screenshots/checkout.png)
 
