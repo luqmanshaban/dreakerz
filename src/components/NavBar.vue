@@ -32,20 +32,20 @@
       :style="{ transform: nav ? 'translateX(0)' : 'translateX(-100%)' }"
     >
       <RouterLink to="/">
-          <h1 class="text-3xl px-5 w-full font-semibold text-orange-700 hover:text-white ease-in-out duration-300">Dreakerz</h1>
+          <h1 class="text-3xl px-5 w-full font-semibold text-orange-700 hover:text-white ease-in-out duration-300" @click="unToggle">Dreakerz</h1>
       </RouterLink>
       <ul class="uppercase p-4 flex flex-col">
-        <RouterLink class="hover:text-orange-700 text-dark font-bold ease-in-out duration-300 inline" to="/">Home</RouterLink>
-          <RouterLink class="hover:text-orange-700 text-dark font-bold ease-in-out duration-300" to="/product">Product</RouterLink>
-          <RouterLink class="hover:text-orange-700 text-dark font-bold ease-in-out duration-300" to="/about">About</RouterLink>
-          <RouterLink class="hover:text-orange-700 text-dark font-bold ease-in-out duration-300" to="/contact">Contact</RouterLink>
-        <RouterLink class="bg-orange-700 text-txt text-center font-bold ease-in-out duration-300 p-10 rounded" to="/login">Login</RouterLink>
-        <RouterLink class="bg-dark text-txt text-center font-bold my-5 rounded ease-in-out duration-300" to="/signup">Signup</RouterLink>
+        <RouterLink @click="unToggle" class="hover:text-orange-700 text-dark font-bold ease-in-out duration-300 inline" to="/">Home</RouterLink>
+        <RouterLink @click="unToggle" class="hover:text-orange-700 text-dark font-bold ease-in-out duration-300" to="/product">Product</RouterLink>
+        <RouterLink @click="unToggle" class="hover:text-orange-700 text-dark font-bold ease-in-out duration-300" to="/about">About</RouterLink>
+        <RouterLink @click="unToggle" class="hover:text-orange-700 text-dark font-bold ease-in-out duration-300" to="/contact">Contact</RouterLink>
+        <RouterLink @click="unToggle" class="bg-orange-700 text-txt text-center font-bold ease-in-out duration-300 p-10 rounded" to="/login">Login</RouterLink>
+        <RouterLink @click="unToggle" class="bg-dark text-txt text-center font-bold my-5 rounded ease-in-out duration-300" to="/signup">Signup</RouterLink>
       </ul>
      </div>
      <RouterLink to="/">
         <img src="@/assets/images/logo.png" class="h-[70px] w-[70px] rounded fixed left-2 top-0 md:hidden" alt="">
-      </RouterLink>
+     </RouterLink>
   
       <button v-if="!nav" @click="handleNav" class="fixed right-2 md:hidden my-3">
           <v-icon size="large" color="white" icon="mdi-menu" style="cursor: pointer;"></v-icon>
