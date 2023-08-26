@@ -5,6 +5,7 @@ import ProductDesc from '@/components/ProductDesc.vue';
 import { ref } from 'vue';
 import FooTer from '../../../components/FooTer.vue';
 import axios from 'axios';
+import { useStore } from 'vuex';
 
 const count = ref(0)
 const color = ref([true, false, false])
@@ -13,11 +14,14 @@ const clickedColor = ref(null)
 const colorPicked = ref('brown')
 const activeStyle = ref(true)
 
+const store = useStore()
+
 const cartItems = ref({
-    color: color,
-    size: clickedSize,
-    total: count.value * 200,
-    status: 'processisng'
+    color: '',
+    size: null,
+    quantity: null,
+    total: null,
+    status: ''
 })
 
 const sizes = [37, 38, 39, 40, 41, 42, 43]
@@ -27,9 +31,7 @@ function sizeClicked(size) {
   if(clickedSize.value !== 0 ){
     activeStyle.value = true
   }
-  console.log(activeStyle.value);
 }
-console.log(activeStyle.value);
 
 function colorClicked(color) {
     clickedColor.value = color;
@@ -61,11 +63,19 @@ const decrement = () => {
 
 const addToCart = () => {
     const total = count.value * 200;
-    console.log(total, colorPicked.value, clickedSize.value);
+    console.log(total, colorPicked.value, count.value, clickedSize.value);
+    cartItems.value = {
+        color: colorPicked,
+        size: clickedSize,
+        quantity: count,
+        total: total,
+        status: 'processing'
+    }
+    store.commit('cart/updateCart', cartItems.value);
+    console.log(store.state.cart.cart);
 }
 
 const makeOrder = async () => {
-    console.log(cartItems.value);
     const token = localStorage.getItem('token')
     try {
         await axios.post('http://localhost:8000/api/orders',cartItems.value, {

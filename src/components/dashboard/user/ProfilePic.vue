@@ -35,7 +35,6 @@
           Authorization: `Bearer ${token}`
         }
       });
-      console.log(response);
       // Assuming the API returns the URL to the uploaded image in the response
       profile.value = response.data.profilePic;
       updateButtonClicked.value = false
@@ -53,7 +52,6 @@
           Authorization: `Bearer ${token}`
         }
       });
-      console.log(response);
       profile.value = response.data.profilePic;
     } catch (error) {
       console.error('Error fetching profile picture:', error);

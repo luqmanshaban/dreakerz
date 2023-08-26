@@ -10,9 +10,9 @@
 
 <script setup>
 import '@/assets/styles/ProductImages.scss';
-import image3 from '@/assets/images/white1.png';
-import image1 from '@/assets/images/brown1.png';
-import image2  from '@/assets/images/black1.png';
+import image3 from '@/assets/images/sneaker1.png';
+import image1 from '@/assets/images/sneaker2.png';
+import image2  from '@/assets/images/sneaker3.png';
 
 defineProps({
    color: {

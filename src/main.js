@@ -16,6 +16,13 @@ const vuetify = createVuetify({
   directives
 })
 
+const token = localStorage.getItem('token')
+if(token){
+  store.commit('auth/setIsLoggedIn', true)
+}else {
+  store.commit('auth/setIsLoggedIn', false)
+}
+
 const app = createApp(App)
 
 app.use(createPinia())

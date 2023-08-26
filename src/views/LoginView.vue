@@ -16,6 +16,7 @@ const user = ref({
   password: ''
 });
 
+
 const submitForm = async () => {
   loggedIn.value = true; 
   try {
@@ -24,15 +25,15 @@ const submitForm = async () => {
     loggedIn.value = true
     invalidCredentials.value = false
     
-    if (response.data.role[0] === 'admin') { 
-      store.commit('SET_IS_ADMIN', true);
-      store.commit('SET_IS_USER', false); 
-    } else {
-      store.commit('SET_IS_ADMIN', false);
-      store.commit('SET_IS_USER', true); 
+    if(response.data.role[0] === 'admin') {
+      store.commit('auth/setIsAdmin', true);
+      store.commit('auth/setIsUser', false)
+    }else {
+      store.commit('auth/setIsUser', true)
+      store.commit('auth/setIsAdmin', false)
     }
     
-    store.commit('SET_IS_LOGGED_IN', true);
+    store.commit('auth/setIsLoggedIn', true);
 
     if (response.data.role[0] === 'admin') {
       router.push('/admin');
@@ -52,10 +53,10 @@ const submitForm = async () => {
 </script>
 
 <template>
-  <section class="bg-[#f3d89f]">
+  <section class="bg-dark h-full">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <RouterLink to="/" class="flex items-center mb-6">
-            <img class="w-8 h-8 mr-2 md:w-[100px] md:h-[100px] rounded-full" src="@/assets/images/logo.png" alt="logo">
+            <img class="h-20 md:h-[200px] rounded-full" src="@/assets/images/logo.png" alt="logo">
         </RouterLink>
 
         <div class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -75,7 +76,7 @@ const submitForm = async () => {
                     <p v-if="invalidCredentials" class="text-red text-center">Invalid username or password</p>
                     <button type="submit" class="w-full text-white bg-blue-700 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Login</button>
                     <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                        Don't have an account? <RouterLink to="/signup" class="font-medium text-cyan-700 hover:underline dark:text-primary-500">Get Started </RouterLink>
+                        Don't have an account? <RouterLink to="/signup" class="font-medium text-blue-700 hover:underline dark:text-primary-500">Get Started </RouterLink>
                     </p>
                 </form>
             </div>

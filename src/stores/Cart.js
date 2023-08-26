@@ -1,27 +1,19 @@
 export default {
     namespaced: true,
     state: {
-        name: '',
-        img: null,
-        price: 0,
-        total: 0,
-        count: 0,
-    },
-    
-    getters: {
-        getCount(state) {
-            return state.count
+        cart: {
+            color: '',
+            size: null,
+            quantity: null,
+            total: null
         }
     },
-
     mutations: {
-        increment(state) {
-            state.count ++;
-            console.log('increment clicked');
-        },
-        decrement(state) {
-            state.count --;
-        },
-        
+        updateCart(state, payload) {
+            state.cart.color = payload.color;
+            state.cart.size = payload.size;
+            state.cart.quantity = payload.quantity;
+            state.cart.total = payload.total;
+        }
     }
 }

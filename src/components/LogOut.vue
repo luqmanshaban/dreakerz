@@ -27,7 +27,7 @@ const Logout = async () => {
     <button @click="Logout">Logout</button>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 button {
     background-color: red;
     border: none;
@@ -37,11 +37,12 @@ button {
     font-family: 'Courier New', Courier, monospace;
     color: #fff;
     transition: 0.3s ease;
+    &:hover {
+      background-color: aliceblue;
+      color: red;
+      font-weight: bold;
+      border: 1px solid red;
+    }
 }
-button:hover {
-    background-color: aliceblue;
-    color: red;
-    font-weight: bold;
-    border: 1px solid red;
-}
+
 </style>
