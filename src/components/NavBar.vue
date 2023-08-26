@@ -25,9 +25,9 @@
     </section>
 
 
-    <nav class="sm:hidden bg-dark fixed w-full p-3 h-20 z-[100]">
+    <nav class="sm:hidden bg-dark fixed w-full p-3 h-20 z-[101]">
       <div
-      class="fixed block sm:hidden pt-8 left-0 top-0 w-[100%] h-full border-r bg-txt border-r-gray-900 transition-transform shadow-md"
+      class="fixed block sm:hidden pt-8 left-0 top-0 w-[100%] z-[105] h-full border-r bg-txt border-r-gray-900 transition-transform shadow-md"
       :class="{ 'ease-in-out duration-500': !nav, 'ease-out duration-500': nav }"
       :style="{ transform: nav ? 'translateX(0)' : 'translateX(-100%)' }"
     >
@@ -44,13 +44,13 @@
       </ul>
      </div>
      <RouterLink to="/">
-        <img src="@/assets/images/logo.png" class="h-[70px] w-[70px] rounded fixed left-2 md:hidden" alt="">
+        <img src="@/assets/images/logo.png" class="h-[70px] w-[70px] rounded fixed left-2 top-0 md:hidden" alt="">
       </RouterLink>
   
       <button v-if="!nav" @click="handleNav" class="fixed right-2 md:hidden my-3">
           <v-icon size="large" color="white" icon="mdi-menu" style="cursor: pointer;"></v-icon>
       </button>
-      <button v-if="nav" @click="unToggle" class="fixed right-2 md:hidden my-3 z-[101]">
+      <button v-if="nav" @click="unToggle" class="fixed right-2 md:hidden my-3 z-[106]">
           <v-icon size="large" color="black" icon="mdi-close" style="cursor: pointer;"></v-icon>
       </button>
       <button @click="toggleCart" class="fixed right-14 top-6">
