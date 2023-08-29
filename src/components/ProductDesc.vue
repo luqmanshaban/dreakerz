@@ -14,7 +14,7 @@
                 <p class="text-gray-500 font-bold">COLOUR</p>
                 <div v-if="color[0]" class="h-[10px] w-[10px] rounded-full bg-gray-600 p-1"></div>
                 <div v-if="color[1]" class="h-[10px] w-[10px] rounded-full bg-black p-1"></div>
-                <div v-if="color[2]" class="h-[10px] w-[10px] rounded-full bg-gray-400 p-1"></div>
+                <div v-if="color[2]" class="h-[10px] w-[10px] rounded-full bg-gray-100 p-1"></div>
             </ul>
             
              <ul class="flex items-center gap-x-5">                

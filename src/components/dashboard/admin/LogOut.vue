@@ -4,6 +4,8 @@ import router from '../../../router';
 
 const Logout = async () => {
   const token = localStorage.getItem('token');
+  router.push('/')
+  localStorage.removeItem('token')
   try {
      await axios.post(
       'http://localhost:8000/api/admin/logout',
@@ -14,8 +16,7 @@ const Logout = async () => {
         },
       }
       );
-    localStorage.removeItem('token')
-    router.push('/')
+   
   } catch (error) {
     console.log(error);
   }

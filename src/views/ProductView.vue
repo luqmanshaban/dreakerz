@@ -72,7 +72,8 @@ const addToCart = () => {
         status: 'processing'
     }
     store.commit('cart/updateCart', cartItems.value);
-    console.log(store.state.cart.cart);
+    store.commit('cart/addToCart', cartItems);
+    // console.log(store.state.cart.cart);
 }
 
 // const makeOrder = async () => {

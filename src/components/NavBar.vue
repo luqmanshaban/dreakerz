@@ -20,7 +20,7 @@
     
     </nav>
 
-    <section v-if="cartActive" class="fixed z-[101] right-[20px] bg-txt p-3 w-[90%] md:h-[300px] md:top-40 md:w-[400px] top-20">
+    <section v-if="cartActive" class="fixed z-[101] right-[20px] bg-txt p-3 w-[90%] md:top-40 md:w-[400px] top-20">
       <CartView/>
     </section>
 
